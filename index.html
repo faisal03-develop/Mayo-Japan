@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mayo Japan — Premium Himalayan Rock Salt | Manufacturer & Exporter</title>
+  <meta name="description" content="Mayo Japan (Pvt) Ltd. — Leading manufacturer and exporter of Himalayan Natural Rock Salt, edible salt, salt lamps, and crafted salt products from Pakistan to Japan and worldwide.">
+  <meta name="keywords" content="Himalayan Rock Salt, Pink Salt, Salt Lamps, Pakistan Salt Exporter, Mayo Japan, Warcha Salt Mines">
+  <link rel="icon" href="https://mayojapan.com/favicon.png" type="image/png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ── Homepage-specific ── */
+    .hero { background: none; }
+
+    .hero-split {
+      display: grid;
+      grid-template-columns: 55fr 45fr;
+      min-height: 100svh;
+    }
+
+    .hero-left {
+      background: linear-gradient(145deg, #1E0A14 0%, #3D1525 40%, #5A1E30 70%, #7B2D42 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: calc(var(--nav-height) + 3rem) clamp(1.5rem, 5vw, 4rem) clamp(2.5rem, 5vw, 4rem);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-left::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 30% 80%, rgba(212,149,106,.18) 0%, transparent 50%),
+        radial-gradient(circle at 85% 20%, rgba(232,160,160,.12) 0%, transparent 40%);
+    }
+
+    .hero-left-content { position: relative; z-index: 1; }
+
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-right img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-right-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(30,10,20,.6) 0%, transparent 100%);
+    }
+
+    .about-image-wrap {
+      position: relative;
+    }
+
+    .about-image-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -12px;
+      border: 2px solid var(--blush);
+      border-radius: calc(var(--radius-xl) + 8px);
+      opacity: .3;
+      z-index: -1;
+    }
+
+    .product-showcase { background: var(--bg-alt); }
+
+    .showcase-card {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+    }
+
+    .showcase-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .showcase-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+
+    .showcase-card:hover img { transform: scale(1.06); }
+
+    .showcase-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,10,18,.85) 0%, rgba(26,10,18,.1) 55%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.75rem;
+    }
+
+    .showcase-card-label {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--blush);
+      margin-bottom: .5rem;
+    }
+
+    .showcase-card-title {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: .75rem;
+    }
+
+    .showcase-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .8125rem;
+      font-weight: 600;
+      color: rgba(255,255,255,.7);
+      transition: color var(--transition-fast), gap var(--transition-fast);
+    }
+
+    .showcase-card:hover .showcase-card-link {
+      color: #fff;
+      gap: .7rem;
+    }
+
+    .rooms-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 200px;
+      gap: 10px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+    }
+
+    .room-item {
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .room-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+    .room-item:nth-child(5) { grid-column: span 2; }
+
+    .room-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+
+    .room-item:hover img { transform: scale(1.06); }
+
+    .research-teaser {
+      background: linear-gradient(135deg, var(--bg-alt) 0%, #EDE4D8 100%);
+    }
+
+    .research-quote {
+      border-left: 3px solid var(--burgundy);
+      padding-left: var(--space-lg);
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .research-quote cite {
+      display: block;
+      font-style: normal;
+      font-family: var(--font-body);
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: .75rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-split {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        min-height: unset;
+      }
+
+      .hero-left {
+        padding-top: calc(var(--nav-height) + 2rem);
+        min-height: 70svh;
+      }
+
+      .hero-right {
+        height: 40svh;
+      }
+
+      .rooms-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 160px;
+      }
+
+      .room-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+      .room-item:nth-child(5) { grid-column: span 2; }
+    }
+
+    @media (max-width: 640px) {
+      .showcase-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── Navigation ──────────────────────────────────────────── -->
+<header class="site-header hero-dark" id="site-header">
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="https://mayojapan.com/img/logo2.png" alt="Mayo Japan Logo" onerror="this.style.display='none'">
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">Mayo Japan</span>
+          <span class="nav-logo-sub">Pvt. Ltd.</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu" role="list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="profile.html" class="nav-link">Profile</a></li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-link nav-dropdown-toggle" aria-haspopup="true">
+            Products
+            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="edible-salt.html" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-item-icon">🧂</span>
+              Edible Rock Salt
+            </a>
+            <a href="natural-lamps.html" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-item-icon">🪨</span>
+              Natural Salt Lamps
+            </a>
+            <a href="crafted-lamps.html" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-item-icon">✨</span>
+              Crafted Salt Lamps
+            </a>
+          </div>
+        </li>
+        <li><a href="our-factory.html" class="nav-link">Our Factory</a></li>
+        <li><a href="scientific-research.html" class="nav-link">Research</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="inquiry.html" class="btn btn-primary btn-sm nav-quote-btn">Get a Quote</a>
+        <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile Drawer -->
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+<div class="nav-drawer" id="nav-drawer" role="dialog" aria-label="Mobile navigation">
+  <button class="nav-drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
+  <div class="nav-drawer-logo">Mayo Japan</div>
+  <nav class="nav-drawer-links">
+    <a href="index.html" class="nav-drawer-link">Home</a>
+    <a href="profile.html" class="nav-drawer-link">Company Profile</a>
+    <div class="nav-drawer-link">Products</div>
+    <div class="nav-drawer-sub">
+      <a href="edible-salt.html" class="nav-drawer-sub-link">🧂 Edible Rock Salt</a>
+      <a href="natural-lamps.html" class="nav-drawer-sub-link">🪨 Natural Salt Lamps</a>
+      <a href="crafted-lamps.html" class="nav-drawer-sub-link">✨ Crafted Salt Lamps</a>
+    </div>
+    <a href="our-factory.html" class="nav-drawer-link">Our Salt Factory</a>
+    <a href="scientific-research.html" class="nav-drawer-link">Scientific Research</a>
+    <a href="contact.html" class="nav-drawer-link">Contact Us</a>
+  </nav>
+  <div class="nav-drawer-footer">
+    <a href="inquiry.html" class="btn btn-primary" style="width:100%;justify-content:center;">Get a Quote →</a>
+  </div>
+</div>
+
+<!-- ─── Hero ─────────────────────────────────────────────────── -->
+<main>
+<section class="hero" aria-label="Hero banner">
+  <div class="hero-split">
+    <!-- Left: Content -->
+    <div class="hero-left">
+      <div class="hero-left-content">
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-dot"></span>
+          Pakistan · Japan · Worldwide
+        </div>
+        <h1 class="hero-title">
+          Pure from the<br>
+          <em>Heart of the<br>Himalayas</em>
+        </h1>
+        <p class="hero-desc">
+          From the ancient Warcha Salt Mines to kitchens and homes across the world — we craft, process, and export premium Himalayan Rock Salt products that meet the highest Japanese food standards.
+        </p>
+        <div class="hero-actions">
+          <a href="edible-salt.html" class="btn btn-primary btn-lg">
+            Explore Products
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="18" height="18">
+              <path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="inquiry.html" class="btn btn-outline-white btn-lg">Request a Quote</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-number">13<span style="font-size:.6em;opacity:.6">+</span></div>
+            <div class="hero-stat-label">Years of Excellence</div>
+          </div>
+          <div style="width:1px;height:40px;background:rgba(255,255,255,.15)"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">35<span style="font-size:.6em;opacity:.6">+</span></div>
+            <div class="hero-stat-label">Product Varieties</div>
+          </div>
+          <div style="width:1px;height:40px;background:rgba(255,255,255,.15)"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">4</div>
+            <div class="hero-stat-label">Global Offices</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="hero-right">
+      <img src="https://mayojapan.com/img/nat01.jpg" alt="Himalayan Natural Rock Salt Lamp — warm pink glow">
+      <div class="hero-right-overlay"></div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ─── Stats Bar ─────────────────────────────────────────── -->
+<section class="stats-bar" aria-label="Company statistics">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-count="13" data-suffix="+">13+</span>
+        <div class="stat-label">Years of Export Excellence</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-count="35" data-suffix="+">35+</span>
+        <div class="stat-label">Product Varieties</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-count="4">4</span>
+        <div class="stat-label">International Offices</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-count="6">6</span>
+        <div class="stat-label">Countries Served</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Product Showcase ──────────────────────────────────── -->
+<section class="section product-showcase" aria-labelledby="products-heading">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-label">Our Products</span>
+      <h2 class="section-title" id="products-heading">Three Pillars of Himalayan Salt</h2>
+      <p class="section-subtitle">
+        Sourced from Warcha Salt Mines and processed under strict quality standards — every product reflects the purity of ancient Himalayan geology.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;" class="showcase-cards">
+      <!-- Edible Salt -->
+      <a href="edible-salt.html" class="showcase-card reveal reveal-delay-1">
+        <img src="https://mayojapan.com/img/edible01.jpg" alt="Dark Pink Himalayan Edible Rock Salt Chunks" loading="lazy">
+        <div class="showcase-card-overlay">
+          <div class="showcase-card-label">Food Grade · Japanese Standard</div>
+          <div class="showcase-card-title">Edible Rock Salt</div>
+          <span class="showcase-card-link">
+            View Catalog
+            <svg viewBox="0 0 16 16" fill="none" width="14" height="14" aria-hidden="true">
+              <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Natural Lamps -->
+      <a href="natural-lamps.html" class="showcase-card reveal reveal-delay-2">
+        <img src="https://mayojapan.com/img/nat08.jpg" alt="Natural Himalayan Rock Salt Lamps" loading="lazy">
+        <div class="showcase-card-overlay">
+          <div class="showcase-card-label">3 kg – 40 kg · Onyx Base Options</div>
+          <div class="showcase-card-title">Natural Salt Lamps</div>
+          <span class="showcase-card-link">
+            View Catalog
+            <svg viewBox="0 0 16 16" fill="none" width="14" height="14" aria-hidden="true">
+              <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Crafted Lamps -->
+      <a href="crafted-lamps.html" class="showcase-card reveal reveal-delay-3">
+        <img src="https://mayojapan.com/img/carft07.jpg" alt="Machine-Crafted Himalayan Salt Lamps" loading="lazy">
+        <div class="showcase-card-overlay">
+          <div class="showcase-card-label">15 Unique Shapes · Custom Orders</div>
+          <div class="showcase-card-title">Crafted Salt Lamps</div>
+          <span class="showcase-card-link">
+            View Catalog
+            <svg viewBox="0 0 16 16" fill="none" width="14" height="14" aria-hidden="true">
+              <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── About Section ─────────────────────────────────────── -->
+<section class="section" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="two-col">
+      <div class="about-image-wrap reveal">
+        <div class="two-col-image">
+          <img src="https://mayojapan.com/img/fact01.jpg" alt="Mayo Salt Industry factory in Quaidabad, District Khushab" loading="lazy">
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <span class="section-label">Who We Are</span>
+        <h2 class="section-title" id="about-heading">A Legacy Built on Nature's Finest Salt</h2>
+        <p class="text-lg" style="color:var(--text-secondary);margin-bottom:1.5rem;line-height:1.75;">
+          We are one of the leading manufacturers and exporters of Himalayan Natural Rock Salt and Rock Salt Products in Pakistan, with our own Salt Factory at Salt City Quaidabad, District Khushab — at the foot of <strong>Warcha Salt Mines</strong>, the 2nd largest salt mines in Pakistan.
+        </p>
+        <p style="color:var(--text-secondary);margin-bottom:2rem;line-height:1.75;font-size:.95rem;">
+          A special rock salt excavated from Warcha Salt Mines is renowned for its unique quality — ideal for premium salt lamps and food-grade edible salt meeting Japanese food standards, which we have fulfilled successfully for over a decade.
+        </p>
+        <div style="display:flex;gap:2rem;margin-bottom:2rem;flex-wrap:wrap;">
+          <div>
+            <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--burgundy)">2nd</div>
+            <div style="font-size:.8rem;color:var(--text-muted);margin-top:.2rem">Largest Mine in Pakistan</div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--burgundy)">84</div>
+            <div style="font-size:.8rem;color:var(--text-muted);margin-top:.2rem">Natural Minerals & Trace Elements</div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--burgundy)">100%</div>
+            <div style="font-size:.8rem;color:var(--text-muted);margin-top:.2rem">Natural, Unprocessed Origin</div>
+          </div>
+        </div>
+        <a href="profile.html" class="btn btn-primary">
+          Read Our Full Profile
+          <svg viewBox="0 0 16 16" fill="none" width="14" height="14" aria-hidden="true">
+            <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Salt Room Gallery ──────────────────────────────────── -->
+<section class="section bg-alt" aria-labelledby="gallery-heading">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-label">Applications</span>
+      <h2 class="section-title" id="gallery-heading">Salt in Every Space</h2>
+      <p class="section-subtitle">
+        From salt-wall spas to residential interiors, Himalayan salt creates unique, health-positive environments that glow with natural warmth.
+      </p>
+    </div>
+
+    <div class="rooms-grid reveal">
+      <div class="room-item"><img src="https://mayojapan.com/img/room01.jpg" alt="Himalayan salt wall spa room" loading="lazy"></div>
+      <div class="room-item"><img src="https://mayojapan.com/img/room02.jpg" alt="Salt lamp interior decor" loading="lazy"></div>
+      <div class="room-item"><img src="https://mayojapan.com/img/room03.jpg" alt="Salt sauna room" loading="lazy"></div>
+      <div class="room-item"><img src="https://mayojapan.com/img/room04.jpg" alt="Himalayan salt room therapy" loading="lazy"></div>
+      <div class="room-item"><img src="https://mayojapan.com/img/room05.jpg" alt="Natural salt lamp in living room" loading="lazy"></div>
+      <div class="room-item"><img src="https://mayojapan.com/img/room06.jpg" alt="Salt wall installation" loading="lazy"></div>
+      <div class="room-item"><img src="https://mayojapan.com/img/room07.jpg" alt="Salt tile architectural feature" loading="lazy"></div>
+      <div class="room-item"><img src="https://mayojapan.com/img/room08.jpg" alt="Himalayan salt interior design" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Value Propositions ────────────────────────────────── -->
+<section class="section" aria-labelledby="values-heading">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-label">Why Choose Mayo Japan</span>
+      <h2 class="section-title" id="values-heading">Our Commitment to Excellence</h2>
+    </div>
+
+    <div class="grid-3">
+      <div class="feature-card reveal reveal-delay-1">
+        <div class="feature-card-icon">🌏</div>
+        <div class="feature-card-title">Happy Clients Worldwide</div>
+        <p class="feature-card-desc">Trusted by importers, distributors, and wellness brands in Japan, USA, Canada, Germany, and the UK. Our long-standing relationships speak to our consistency.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-2">
+        <div class="feature-card-icon">🏔️</div>
+        <div class="feature-card-title">The Great Choice</div>
+        <p class="feature-card-desc">Sourced directly from Warcha Salt Mines — the 2nd largest salt deposit in Pakistan. Pure, unprocessed, naturally rich in 84 essential minerals and trace elements.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-3">
+        <div class="feature-card-icon">✅</div>
+        <div class="feature-card-title">Unmatched Reliability</div>
+        <p class="feature-card-desc">Food-grade edible salt meeting Japanese standards, custom sizes and shapes on request, with dedicated quality control from mine to export packaging.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Research Teaser ───────────────────────────────────── -->
+<section class="section research-teaser" aria-labelledby="research-teaser-heading">
+  <div class="container">
+    <div class="two-col">
+      <div class="reveal">
+        <span class="section-label">Scientific Research</span>
+        <h2 class="section-title" id="research-teaser-heading">Nature's Air Purifier, Backed by Science</h2>
+        <p style="color:var(--text-secondary);margin-bottom:1.75rem;line-height:1.75;">
+          Former USSR research encompassing <strong>5,000+ scientific documents</strong> supports the therapeutic effects of negative ions on respiratory health, asthma, and well-being. Our salt lamps emit <strong>1,000–1,500 negative ions per cm³</strong>.
+        </p>
+        <blockquote class="research-quote">
+          "An astonishingly small quantity of negative ions could kill bacteria and quickly take them out of the air."
+          <cite>— Dr. Albert Krueger, University of California, Berkeley</cite>
+        </blockquote>
+        <a href="scientific-research.html" class="btn btn-outline mt-xl">
+          Read Full Research
+          <svg viewBox="0 0 16 16" fill="none" width="14" height="14" aria-hidden="true">
+            <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="highlight-stat">
+          <span class="highlight-stat-number" data-count="1500" data-suffix="">1,500</span>
+          <div class="highlight-stat-label">Negative Ions / cm³ emitted<br>by Mayo Japan Salt Lamps</div>
+          <div style="margin-top:2rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+            <div style="text-align:center;">
+              <div style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:#fff">84</div>
+              <div style="font-size:.75rem;color:rgba(255,255,255,.6);margin-top:.2rem">Natural Minerals</div>
+            </div>
+            <div style="width:1px;height:48px;background:rgba(255,255,255,.2);align-self:center;"></div>
+            <div style="text-align:center;">
+              <div style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:#fff">5k+</div>
+              <div style="font-size:.75rem;color:rgba(255,255,255,.6);margin-top:.2rem">Scientific Studies</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Factory Preview ───────────────────────────────────── -->
+<section class="section" aria-labelledby="factory-preview-heading">
+  <div class="container">
+    <div class="two-col reversed">
+      <div class="reveal">
+        <span class="section-label">Our Manufacturing</span>
+        <h2 class="section-title" id="factory-preview-heading">From Mine to Market — Complete Control</h2>
+        <p style="color:var(--text-secondary);margin-bottom:1.5rem;line-height:1.75;">
+          Our integrated supply chain begins at Warcha Salt Mines and flows through our dedicated <strong>Mayo Salt Industry</strong> factory in Quaidabad — where every lamp is shaped and every grain of edible salt is processed under expert food technologist supervision.
+        </p>
+        <ul style="display:flex;flex-direction:column;gap:.75rem;margin-bottom:2rem;">
+          <li style="display:flex;gap:.75rem;align-items:flex-start;">
+            <span style="color:var(--burgundy);font-weight:700;flex-shrink:0;">01.</span>
+            <span style="color:var(--text-secondary);font-size:.9375rem;">Rock salt extracted from Warcha Salt Mines</span>
+          </li>
+          <li style="display:flex;gap:.75rem;align-items:flex-start;">
+            <span style="color:var(--burgundy);font-weight:700;flex-shrink:0;">02.</span>
+            <span style="color:var(--text-secondary);font-size:.9375rem;">Industrial block cutting, sizing, and grading</span>
+          </li>
+          <li style="display:flex;gap:.75rem;align-items:flex-start;">
+            <span style="color:var(--burgundy);font-weight:700;flex-shrink:0;">03.</span>
+            <span style="color:var(--text-secondary);font-size:.9375rem;">Artisanal lamp shaping and lathe-turning</span>
+          </li>
+          <li style="display:flex;gap:.75rem;align-items:flex-start;">
+            <span style="color:var(--burgundy);font-weight:700;flex-shrink:0;">04.</span>
+            <span style="color:var(--text-secondary);font-size:.9375rem;">Quality control, shrink-wrap, and export packaging</span>
+          </li>
+        </ul>
+        <a href="our-factory.html" class="btn btn-primary">
+          See Our Factory
+          <svg viewBox="0 0 16 16" fill="none" width="14" height="14" aria-hidden="true">
+            <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+      <div class="reveal reveal-delay-2" style="direction:ltr">
+        <div class="two-col-image">
+          <img src="https://mayojapan.com/img/fact03.jpg" alt="Mayo Salt Industry factory floor — salt lamp processing" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA Strip ─────────────────────────────────────────── -->
+<section class="cta-strip" aria-labelledby="cta-heading">
+  <div class="container cta-strip-content">
+    <div class="reveal">
+      <span class="section-label" style="color:var(--blush);justify-content:center;margin-bottom:1rem;">Ready to Partner?</span>
+      <h2 id="cta-heading">Start Your Himalayan Salt Journey</h2>
+      <p>Whether you're a wholesale importer, distributor, or specialty retailer — we're ready to fulfill your exact requirements in any size, shape, or specification.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="inquiry.html" class="btn btn-primary btn-lg">
+          Send an Inquiry
+          <svg viewBox="0 0 16 16" fill="none" width="14" height="14" aria-hidden="true">
+            <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="contact.html" class="btn btn-outline-white btn-lg">View All Offices</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ─── Footer ────────────────────────────────────────────── -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="footer-logo-text">Mayo Japan</div>
+        <div class="footer-logo-sub">Pvt. Ltd.</div>
+        <p class="footer-tagline">"From the Heart of the Himalayas to the World"</p>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📍</span>
+          <span>2 Ground Floor, Computer Plaza,<br>3-Court Street, 25 B Lower Mall,<br>Lahore, Pakistan</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📞</span>
+          <a href="tel:+924237310284">+92-42-37310284</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">✉️</span>
+          <a href="mailto:info@mayojapan.com">info@mayojapan.com</a>
+        </div>
+      </div>
+
+      <!-- Navigate -->
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="profile.html" class="footer-link">Company Profile</a>
+        <a href="our-factory.html" class="footer-link">Our Salt Factory</a>
+        <a href="scientific-research.html" class="footer-link">Scientific Research</a>
+        <a href="contact.html" class="footer-link">Contact Us</a>
+        <a href="inquiry.html" class="footer-link">Inquiry Form</a>
+      </div>
+
+      <!-- Products -->
+      <div>
+        <div class="footer-col-title">Products</div>
+        <a href="edible-salt.html" class="footer-link">Edible Rock Salt</a>
+        <a href="natural-lamps.html" class="footer-link">Natural Salt Lamps</a>
+        <a href="crafted-lamps.html" class="footer-link">Crafted Salt Lamps</a>
+        <a href="crafted-lamps.html#tiles" class="footer-link">Rock Salt Tiles</a>
+        <a href="crafted-lamps.html#wellness" class="footer-link">Wellness Products</a>
+      </div>
+
+      <!-- Japan Office -->
+      <div>
+        <div class="footer-col-title">Japan Office</div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📍</span>
+          <span>Ibaraki-ken, Koga-shi<br>Higashi Morokawa 149-3</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📞</span>
+          <a href="tel:0081280751000">0081-280-751000</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">✉️</span>
+          <a href="mailto:president@mayojapan.com">president@mayojapan.com</a>
+        </div>
+        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.06);">
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📍</span>
+            <span>Saitama-ken, Kasukabe-shi<br>Naganuma 889-1</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">✉️</span>
+            <a href="mailto:mayojapan786@gmail.com">mayojapan786@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copyright">© 2024 Mayo Japan (Pvt) Ltd. All rights reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="inquiry.html" class="footer-bottom-link">Get a Quote</a>
+        <a href="contact.html" class="footer-bottom-link">All Offices</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
