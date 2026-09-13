@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Profile — Mayo Japan (Pvt) Ltd.</title>
+  <meta name="description" content="Learn about Mayo Japan — a leading Pak-Japan manufacturer and exporter of Himalayan Rock Salt with facilities at Warcha Salt Mines and global offices.">
+  <link rel="icon" href="https://mayojapan.com/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .presence-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:1rem; }
+    .presence-card {
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--radius-lg);
+      padding:1.25rem 1rem;
+      text-align:center;
+      box-shadow:var(--shadow-sm);
+    }
+    .presence-card-flag { font-size:2rem; margin-bottom:.5rem; }
+    .presence-card-name { font-weight:600; font-size:.875rem; color:var(--text-primary); }
+    .presence-card-role { font-size:.75rem; color:var(--text-muted); margin-top:.2rem; }
+
+    .profile-section-image {
+      border-radius:var(--radius-xl);
+      overflow:hidden;
+      box-shadow:var(--shadow-md);
+      aspect-ratio:16/9;
+    }
+    .profile-section-image img { width:100%;height:100%;object-fit:cover; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="site-header scrolled" id="site-header">
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="https://mayojapan.com/img/logo2.png" alt="Mayo Japan Logo" onerror="this.style.display='none'">
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">Mayo Japan</span>
+          <span class="nav-logo-sub">Pvt. Ltd.</span>
+        </div>
+      </a>
+      <ul class="nav-menu" role="list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="profile.html" class="nav-link active">Profile</a></li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-link nav-dropdown-toggle">Products
+            <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="edible-salt.html" class="nav-dropdown-item"><span class="nav-dropdown-item-icon">🧂</span>Edible Rock Salt</a>
+            <a href="natural-lamps.html" class="nav-dropdown-item"><span class="nav-dropdown-item-icon">🪨</span>Natural Salt Lamps</a>
+            <a href="crafted-lamps.html" class="nav-dropdown-item"><span class="nav-dropdown-item-icon">✨</span>Crafted Salt Lamps</a>
+          </div>
+        </li>
+        <li><a href="our-factory.html" class="nav-link">Our Factory</a></li>
+        <li><a href="scientific-research.html" class="nav-link">Research</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="inquiry.html" class="btn btn-primary btn-sm nav-quote-btn">Get a Quote</a>
+        <button class="nav-burger" id="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="nav-overlay" id="nav-overlay"></div>
+<div class="nav-drawer" id="nav-drawer">
+  <button class="nav-drawer-close" id="drawer-close">✕</button>
+  <div class="nav-drawer-logo">Mayo Japan</div>
+  <nav class="nav-drawer-links">
+    <a href="index.html" class="nav-drawer-link">Home</a>
+    <a href="profile.html" class="nav-drawer-link active">Company Profile</a>
+    <div class="nav-drawer-link">Products</div>
+    <div class="nav-drawer-sub">
+      <a href="edible-salt.html" class="nav-drawer-sub-link">🧂 Edible Rock Salt</a>
+      <a href="natural-lamps.html" class="nav-drawer-sub-link">🪨 Natural Salt Lamps</a>
+      <a href="crafted-lamps.html" class="nav-drawer-sub-link">✨ Crafted Salt Lamps</a>
+    </div>
+    <a href="our-factory.html" class="nav-drawer-link">Our Salt Factory</a>
+    <a href="scientific-research.html" class="nav-drawer-link">Scientific Research</a>
+    <a href="contact.html" class="nav-drawer-link">Contact Us</a>
+  </nav>
+  <div class="nav-drawer-footer"><a href="inquiry.html" class="btn btn-primary" style="width:100%;justify-content:center;">Get a Quote →</a></div>
+</div>
+
+<main>
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container page-hero-content">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+      <span>Profile</span>
+    </div>
+    <div class="page-hero-label">About Us</div>
+    <h1>Company Profile</h1>
+    <p class="page-hero-desc">A Pak-Japan enterprise rooted in ancient salt geology — delivering the world's finest Himalayan Rock Salt products since our founding.</p>
+  </div>
+</section>
+
+<!-- PROFILE INTRO -->
+<section class="section">
+  <div class="container">
+    <div class="two-col">
+      <div class="reveal">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title">Leading Manufacturers &amp; Exporters of Himalayan Rock Salt</h2>
+        <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1.25rem;">
+          We are one of the leading manufacturers and exporters of Himalayan Natural Rock Salt and Rock Salt Products in Pakistan. We have our own Salt Factory at <strong>Salt City Quaidabad, District Khushab</strong> — at the foot of Warcha Salt Mines, the 2nd largest salt mines in Pakistan after Khewra Salt Mines.
+        </p>
+        <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1.25rem;">
+          A special rock salt excavated from Warcha Salt Mines is recommended for its unique quality — ideal for premium salt lamps and for producing edible salt of exceptional purity. We are pioneers in making fine-quality Himalayan Rock Salt meeting <strong>Japanese food standards</strong>, consistently fulfilled for over a decade.
+        </p>
+        <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:2rem;">
+          Our efficient, hardworking, and quality-conscious staff work day and night — from excavating salt at the mine to factory processing, shaping lamps, and pressing edible salt — all under strict supervision of food and quality experts.
+        </p>
+        <a href="inquiry.html" class="btn btn-primary">Inquire Now →</a>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="profile-section-image">
+          <img src="https://mayojapan.com/img/fact02.jpg" alt="Mayo Salt Industry factory operations" loading="lazy">
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem;">
+          <div style="background:var(--bg-alt);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+            <div style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--burgundy)">2nd</div>
+            <div style="font-size:.8rem;color:var(--text-muted);margin-top:.3rem">Largest Mine in Pakistan</div>
+          </div>
+          <div style="background:var(--bg-alt);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+            <div style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--burgundy)">13+</div>
+            <div style="font-size:.8rem;color:var(--text-muted);margin-top:.3rem">Years of Excellence</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="section bg-alt">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-label">What We Offer</span>
+      <h2 class="section-title">Full-Spectrum Salt Manufacturing</h2>
+      <p class="section-subtitle">From raw extraction to finished export-ready product — we handle everything in-house.</p>
+    </div>
+    <div class="grid-3">
+      <div class="feature-card reveal reveal-delay-1">
+        <div class="feature-card-icon">🧂</div>
+        <div class="feature-card-title">Edible Rock Salt</div>
+        <p class="feature-card-desc">Fine-quality Himalayan edible salt in various grain sizes (1-2mm, 3-5mm, 5-7mm, 25 Mesh, chunks) meeting Japanese food standards. Dark pink, light pink, and white varieties.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-2">
+        <div class="feature-card-icon">🪨</div>
+        <div class="feature-card-title">Natural Salt Lamps</div>
+        <p class="feature-card-desc">Naturally chiseled lamps in weights from 3 kg to 40 kg, with standard and premium Onyx marble base editions. Unique color and shape variations in every piece.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-3">
+        <div class="feature-card-icon">✨</div>
+        <div class="feature-card-title">Crafted Salt Lamps</div>
+        <p class="feature-card-desc">Machine-precision crafted into 15+ shapes: Guldan, Surahi, Fire Bowl, Tear, Cylinder, Football, Pyramid. Salt tiles (8"×4"×2"), eggs, hearts, soap bars, and massage balls.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-1">
+        <div class="feature-card-icon">🏗️</div>
+        <div class="feature-card-title">Salt Tiles & Architecture</div>
+        <p class="feature-card-desc">Rock salt tiles (8"×4"×2") for spa walls, salt rooms, sauna interiors, and architectural wellness installations.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-2">
+        <div class="feature-card-icon">🛁</div>
+        <div class="feature-card-title">Bathing & Wellness</div>
+        <p class="feature-card-desc">Bathing salt, de-icing salt, massage soap bars, salt eggs, and round massage balls in dark pink and light pink varieties.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-3">
+        <div class="feature-card-icon">🔧</div>
+        <div class="feature-card-title">Custom Orders</div>
+        <p class="feature-card-desc">Fully capable of fulfilling any custom requirement — any shape, size, weight, grain, or specification. We work directly with your sourcing team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY STRIP -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Factory & Products</span>
+      <h2 class="section-title">Crafted with Precision</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;" class="reveal">
+      <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/3;"><img src="https://mayojapan.com/img/fact04.jpg" alt="Factory processing" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+      <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/3;"><img src="https://mayojapan.com/img/edible12.jpg" alt="Pink Salt Big Chunk" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+      <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/3;"><img src="https://mayojapan.com/img/carft01.jpg" alt="Guldan Crafted Salt Lamp" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- GLOBAL PRESENCE -->
+<section class="section bg-alt">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-label">Global Reach</span>
+      <h2 class="section-title">A Truly International Enterprise</h2>
+      <p class="section-subtitle">Headquartered in Lahore with offices in Japan, and actively expanding to USA, Canada, Germany, and the United Kingdom.</p>
+    </div>
+    <div class="presence-grid reveal">
+      <div class="presence-card">
+        <div class="presence-card-flag">🇵🇰</div>
+        <div class="presence-card-name">Pakistan</div>
+        <div class="presence-card-role">Head Office · Salt Factory</div>
+      </div>
+      <div class="presence-card">
+        <div class="presence-card-flag">🇯🇵</div>
+        <div class="presence-card-name">Japan</div>
+        <div class="presence-card-role">2 Branch Offices</div>
+      </div>
+      <div class="presence-card">
+        <div class="presence-card-flag">🇺🇸</div>
+        <div class="presence-card-name">USA</div>
+        <div class="presence-card-role">Expanding</div>
+      </div>
+      <div class="presence-card">
+        <div class="presence-card-flag">🇨🇦</div>
+        <div class="presence-card-name">Canada</div>
+        <div class="presence-card-role">Expanding</div>
+      </div>
+      <div class="presence-card">
+        <div class="presence-card-flag">🇩🇪</div>
+        <div class="presence-card-name">Germany</div>
+        <div class="presence-card-role">Expanding</div>
+      </div>
+      <div class="presence-card">
+        <div class="presence-card-flag">🇬🇧</div>
+        <div class="presence-card-name">United Kingdom</div>
+        <div class="presence-card-role">Expanding</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;" class="reveal">
+      <a href="contact.html" class="btn btn-outline">View All Office Locations →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-strip">
+  <div class="container cta-strip-content">
+    <div class="reveal">
+      <h2>Ready to Source Premium Himalayan Salt?</h2>
+      <p>Connect with our team to discuss your wholesale requirements, custom specifications, or export arrangements.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="inquiry.html" class="btn btn-primary btn-lg">Send an Inquiry →</a>
+        <a href="contact.html" class="btn btn-outline-white btn-lg">Our Offices</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-text">Mayo Japan</div>
+        <div class="footer-logo-sub">Pvt. Ltd.</div>
+        <p class="footer-tagline">"From the Heart of the Himalayas to the World"</p>
+        <div class="footer-contact-item"><span class="footer-contact-icon">📍</span><span>2 Ground Floor, Computer Plaza, 3-Court Street, 25 B Lower Mall, Lahore, Pakistan</span></div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">📞</span><a href="tel:+924237310284">+92-42-37310284</a></div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">✉️</span><a href="mailto:info@mayojapan.com">info@mayojapan.com</a></div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="profile.html" class="footer-link">Company Profile</a>
+        <a href="our-factory.html" class="footer-link">Our Salt Factory</a>
+        <a href="scientific-research.html" class="footer-link">Scientific Research</a>
+        <a href="contact.html" class="footer-link">Contact Us</a>
+        <a href="inquiry.html" class="footer-link">Inquiry Form</a>
+      </div>
+      <div>
+        <div class="footer-col-title">Products</div>
+        <a href="edible-salt.html" class="footer-link">Edible Rock Salt</a>
+        <a href="natural-lamps.html" class="footer-link">Natural Salt Lamps</a>
+        <a href="crafted-lamps.html" class="footer-link">Crafted Salt Lamps</a>
+        <a href="crafted-lamps.html#tiles" class="footer-link">Rock Salt Tiles</a>
+        <a href="crafted-lamps.html#wellness" class="footer-link">Wellness Products</a>
+      </div>
+      <div>
+        <div class="footer-col-title">Japan Office</div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">📍</span><span>Ibaraki-ken, Koga-shi, Higashi Morokawa 149-3</span></div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">📞</span><a href="tel:0081280751000">0081-280-751000</a></div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">✉️</span><a href="mailto:president@mayojapan.com">president@mayojapan.com</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copyright">© 2024 Mayo Japan (Pvt) Ltd. All rights reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="inquiry.html" class="footer-bottom-link">Get a Quote</a>
+        <a href="contact.html" class="footer-bottom-link">All Offices</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js" defer></script>
+</body>
+</html>
