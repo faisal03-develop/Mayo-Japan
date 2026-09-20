@@ -52,8 +52,8 @@
   const imageSources = [
     'img/hero-bg-1.png',
     'img/hero-bg-2.png',
-    'https://mayojapan.com/img/nat01.jpg',
-    'https://mayojapan.com/img/room01.jpg',
+    'public/img/nat01.jpg',
+    'public/img/room01.jpg',
   ];
 
   let loaded = 0;
@@ -97,7 +97,7 @@
   logo.crossOrigin = 'anonymous';
   logo.onload = onLoad;
   logo.onerror = () => { logo = null; onLoad(); };
-  logo.src = 'https://mayojapan.com/img/logo2.png';
+  logo.src = 'public/img/logo2.png';
 
   /* ── Particles ──────────────────────────────────────────────── */
   function initParticles() {
